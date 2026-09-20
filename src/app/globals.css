@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --muted: 210 25% 95%;
+    --muted-foreground: 215 16% 47%;
+    --border: 214 24% 89%;
+    --primary: 160 84% 33%;
+    --primary-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222 30% 8%;
+    --foreground: 210 20% 96%;
+    --card: 222 25% 11%;
+    --card-foreground: 210 20% 96%;
+    --muted: 217 20% 17%;
+    --muted-foreground: 215 16% 65%;
+    --border: 217 20% 20%;
+    --primary: 160 84% 39%;
+    --primary-foreground: 0 0% 100%;
+    --destructive: 0 63% 45%;
+    --destructive-foreground: 0 0% 100%;
+  }
+
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground antialiased; }
+}
+
+.chat-pattern {
+  background-color: hsl(var(--muted) / .45);
+  background-image: radial-gradient(hsl(var(--muted-foreground) / .08) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+* { scrollbar-width: thin; scrollbar-color: hsl(var(--border)) transparent; }
